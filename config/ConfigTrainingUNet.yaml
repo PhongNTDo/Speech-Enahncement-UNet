@@ -1,0 +1,14 @@
+data:
+  num_of_samples: 2000
+  frame_length: 8064
+  frame_shift: 8064
+  frame_shift_noise: 5000
+  sample_rate: 8000
+  min_duration: 1.0
+  n_fft: 255
+  frame_shift_fft: 63
+  voice_dir: "/home/phongdnt/Documents/data_speech_enhancement/audio_LibriSpeech"
+  noise_dir: "/home/phongdnt/Documents/data_speech_enhancement/noise_esc50"
+  path_save_time_serie: "/home/phongdnt/Documents/data_speech_enhancement/time_serie"
+  path_save_spectrogram: "/home/phongdnt/Documents/data_speech_enhancement/spectrogram"
+  path_save_sound: "/home/phongdnt/Documents/data_speech_enhancement/sound"
