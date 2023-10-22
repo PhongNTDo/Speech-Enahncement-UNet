@@ -13,3 +13,10 @@ data:
   path_save_spectrogram: "/home/phongdnt/Documents/data_speech_enhancement/spectrogram"
   path_save_sound: "/home/phongdnt/Documents/data_speech_enhancement/sound"
   save_sound: True
+
+model:
+  model_name: "Speech_Enhancement_UNet"
+  weights_path: "/home/phongdnt/Documents/data_speech_enhancement/models"
+  epochs: 10
+  batch_size: 16
+  training_from_scratch: True

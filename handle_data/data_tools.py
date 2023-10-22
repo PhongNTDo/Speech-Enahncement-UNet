@@ -77,3 +77,20 @@ def convert_np_audio_to_spectrogram(np_audio,
             n_fft, frame_shift_fft, np_audio[i]
         )
     return m_mag_db, m_phase
+
+
+def scaled_in(matrix):
+    matrix = (matrix + 46) / 50
+    return matrix
+
+
+def scaled_ou(matrix):
+    return (matrix - 6) / 82
+
+
+def inv_scaled_in(matrix):
+    return matrix * 50 - 46
+
+
+def inv_scaled_ou(matrix):
+    return matrix * 82 + 6
