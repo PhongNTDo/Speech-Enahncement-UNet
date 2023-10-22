@@ -12,3 +12,4 @@ data:
   path_save_time_serie: "/home/phongdnt/Documents/data_speech_enhancement/time_serie"
   path_save_spectrogram: "/home/phongdnt/Documents/data_speech_enhancement/spectrogram"
   path_save_sound: "/home/phongdnt/Documents/data_speech_enhancement/sound"
+  save_sound: True

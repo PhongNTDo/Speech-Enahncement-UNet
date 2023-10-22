@@ -40,12 +40,13 @@ def main():
     frame_shift_fft = config_data["frame_shift_fft"]
     path_save_sound = config_data["path_save_sound"]
 
-    noisy_voice_long = prod_noise_voice.reshape(1, num_of_samples * frame_length)
-    sf.write(path_save_sound + 'noisy_voice_long.wav', noisy_voice_long[0, :], sample_rate)
-    voice_long = prod_voice.reshape(1, num_of_samples * frame_length)
-    sf.write(path_save_sound + 'voice_long.wav', voice_long[0, :], sample_rate)
-    noise_long = prod_noise.reshape(1, num_of_samples * frame_length)
-    sf.write(path_save_sound + 'noise_long.wav', noise_long[0, :], sample_rate)
+    if config_data["save_sound"]:
+        noisy_voice_long = prod_noise_voice.reshape(1, num_of_samples * frame_length)
+        sf.write(path_save_sound + 'noisy_voice_long.wav', noisy_voice_long[0, :], sample_rate)
+        voice_long = prod_voice.reshape(1, num_of_samples * frame_length)
+        sf.write(path_save_sound + 'voice_long.wav', voice_long[0, :], sample_rate)
+        noise_long = prod_noise.reshape(1, num_of_samples * frame_length)
+        sf.write(path_save_sound + 'noise_long.wav', noise_long[0, :], sample_rate)
 
     dim_square_spec = int(n_fft / 2) + 1
     m_amp_db_voice, m_phase_voice = convert_np_audio_to_spectrogram(
